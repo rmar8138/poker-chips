@@ -14,7 +14,6 @@ const create = async (req, res) => {
 const show = async (req, res) => {
   const { id: roomId } = req.params;
   const room = await RoomModel.findOne({ roomId });
-  console.log(room);
   res.render("rooms/show", { room });
 };
 

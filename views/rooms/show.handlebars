@@ -1,1 +1,7 @@
 <h1>{{room.roomId}}</h1>
+
+<ul>
+  {{#each room.users}}
+  <li>{{this.username}}</li>
+  {{/each}}
+</ul>
