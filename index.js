@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 
+const router = require("./routes");
+
 const app = express();
 const port = process.env.PORT || 4321;
 
@@ -35,7 +37,7 @@ app.use(bodyParser.json());
 
 // Routes
 
-app.get("/", (req, res) => res.render("home"));
+app.use(router);
 
 // Start server
 
