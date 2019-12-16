@@ -11,3 +11,9 @@
   </div>
   <input type="submit" value="Create room">
 </form>
+
+<script>
+  const socket = io();
+  const message = "Hey!"
+  socket.emit("message", message)
+</script>
